@@ -29,7 +29,7 @@ public class ApplicationManager {
     driver = new ChromeDriver();
     baseUrl = "http://localhost/addressbook/";
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-    driver.get("http://localhost/addressbook/group.php");
+    driver.get("http://localhost/addressbook");
     groupHelper = new GroupHelper(driver);
     js = (JavascriptExecutor) driver;
     navigationHelper = new NavigationHelper(driver);
