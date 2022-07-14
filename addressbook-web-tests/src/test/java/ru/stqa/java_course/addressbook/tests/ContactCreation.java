@@ -9,12 +9,8 @@ public class ContactCreation extends TestBase {
   public void testContactCreation() {
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().initContactCreation();
-    app.getContactHelper().fillContactForm(new ContactData("test_name20", "test_surname20", "test888"), true);
+    app.getContactHelper().fillContactForm(new ContactData("test_name45", "test_surname40", "test_contact"), true);
     app.getContactHelper().submitContactCreation();
-
-//    метод returnToGroupPage() для этого теста выдаёт ошибку
-//    а для теста testGroupsCreation работает ок
-
-//    app.getGroupHelper().returnToGroupPage();
+    app.getContactHelper().returnToHomePage();
   }
 }
